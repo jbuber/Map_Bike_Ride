@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer Shadow (Ambient Occlusion) -->
+    <item android:top="4dp" android:left="2dp" android:right="2dp" android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="22dp"/>
+            <solid android:color="#80000000"/>
+        </shape>
+    </item>
+
+    <!-- Polished Chrome Bezel -->
+    <item android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="22dp"/>
+            <gradient
+                android:angle="270"
+                android:startColor="#FFFFFFFF"
+                android:centerColor="#FFAAAAAA"
+                android:endColor="#FF555555"
+                android:type="linear"/>
+            <stroke android:width="1dp" android:color="#FFFFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- Deep Metallic Core (Sapphire Steel) -->
+    <item android:top="2dp" android:bottom="5dp" android:left="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/>
+            <gradient
+                android:angle="270"
+                android:startColor="#E62C3E50"
+                android:centerColor="#E6003366"
+                android:endColor="#E6001A33"
+                android:type="linear"/>
+        </shape>
+    </item>
+
+    <!-- Inner Glow / Bevel Light -->
+    <item android:top="2dp" android:bottom="5dp" android:left="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/>
+            <stroke android:width="1.5dp" android:color="#40FFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- Specular Highlight (The 'Shininess') -->
+    <item android:top="2dp" android:bottom="22dp" android:left="6dp" android:right="6dp">
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="18dp" android:topRightRadius="18dp" android:bottomLeftRadius="2dp" android:bottomRightRadius="2dp"/>
+            <gradient
+                android:angle="270"
+                android:startColor="#A0FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="linear"/>
+        </shape>
+    </item>
+
+    <!-- Secondary Gloss Reflection -->
+    <item android:top="24dp" android:bottom="6dp" android:left="12dp" android:right="12dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp"/>
+            <gradient
+                android:angle="270"
+                android:startColor="#00FFFFFF"
+                android:endColor="#15FFFFFF"
+                android:type="linear"/>
+        </shape>
+    </item>
+
+    <!-- Interaction Ripple -->
+    <item android:bottom="3dp">
+        <ripple android:color="#60FFFFFF">
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="22dp"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+</layer-list>
